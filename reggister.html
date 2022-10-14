@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NIPUNA '21</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+
+body {
+    font-family: 'Montserrat';
+    background-color: black;
+}
+div {
+    font-family: 'Montserrat';
+}
+a {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+h1, h2,h3, h4, h5, h6 ,p{
+  font-family: 'Montserrat';
+}
+h3{
+  font-weight: bold;
+}
+    /* The container */
+    .container-check {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Hide the browser's default checkbox */
+    .container-check input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color:  #917567;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .container-check:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    
+    /* When the checkbox is checked, add a blue background */
+    .container-check input:checked ~ .checkmark {
+      background-color:  red;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .container-check input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .container-check .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    
+ 
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+    /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 300; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 150%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(246, 246, 246); /* Fallback color */
+  background-color: rgba(254, 250, 250, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(238, 237, 237, 0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close1 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close3 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close4 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close4:hover,
+.close4:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close5 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close5:hover,
+.close5:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close6 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close6:hover,
+.close6:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close7 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close7:hover,
+.close7:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close8 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close8:hover,
+.close8:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close9 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close9:hover,
+.close9:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close10 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close10:hover,
+.close10:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close11 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close11:hover,
+.close11:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close20 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close20:hover,
+.close20:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modali {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modali-content {
+  padding: 2px 16px;
+  display: block;
+  /* width: 60%;
+  max-width: 500px; */
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modali-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closei {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closei:hover,
+.closei:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modali-content {
+    width: 100%;
+  }
+}
+
+
+
+
+.modal-headerfn {
+  padding: 2px 16px;
+  background-color: black;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footerg {
+  padding: 2px 16px;
+  background-color: black;
+  color: black;
+}
+
+
+.button22 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+h1{
+  text-decoration-color: red;
+}
+    </style>
+  <!-- =======================================================
+  * Template Name: Restaurantly - v3.3.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  
+</head>
+
+<body style="background-color: #4CAF50;">
+
+  <!-- ======= Top Bar ======= -->
+  <!-- <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+          <li>En</li>
+          <li><a href="#">De</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- ======= Header ======= -->
+  <!-- <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0" ><a href="index.html"></a></h1>
+     
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Events</a></li>
+           <li><a class="nav-link scrollto" href="#cpg">Campus Ambassador Program</a></li>
+          <li><a class="nav-link scrollto" href="#events">Our Team</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Register</a>
+
+    </div>
+  </header> -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <!-- <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1> NIPUNA'21</h1>
+          <h2>MYSTIC REALM OF SPACE!</h2>
+
+          <div class="btns">
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">EVENTS</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">REGISTER</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://youtu.be/u-I05Z5l5dw" class="glightbox play-btn"></a>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+  <!-- End Hero -->
+
+  
+  
+
+  <main id="main">
+
+    
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+         
+        <div class="section-title">
+          <h1 style="text-align: center; font-weight: bold; text-decoration-color: black;">Register Here</h1>
+          
+        </div>
+
+        <form action="final.php" method="post" role="form" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="namep" class="form-control" id="namep" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required style="color: #888;">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" name="city" class="form-control" id="city" placeholder="City" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" class="form-control" name="collegename" id="collegename" placeholder="College name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="number" class="form-control" name="year" id="year" placeholder="Year Of Study " data-rule="minlen:1" data-msg="Please enter at least 1 chars" required>
+              <div class="validate"></div>
+            </div>
+
+             <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" class="form-control" name="dept" id="dept" placeholder="Department" data-rule="minlen:1" data-msg="Please enter at least 1 chars" required>
+              <div class="validate"></div>
+            </div>
+            <div>
+
+            
+            <h1 style="text-align: center; font-size: 130%;">
+              EVENTS
+            </h1>
+            
+
+            </div>
+            
+    <div class="col-lg-4 col-md-6 form-group mt-3">
+      <label class="container-check" >ALL 
+        <input type="checkbox" name="all[]" id="all" value="all" onClick="uncheck(1);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check" >COMBO1
+        <input type="checkbox" name="all[]" id="combo1" value="combo1" onClick="uncheck(14);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check" >COMBO2
+        <input type="checkbox" name="all[]" id="combo2" value="combo2" onClick="uncheck(15);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">CODE COMBAT
+        <input type="checkbox" name="all[]" id="codecombat" value="codecombat" onClick="uncheck(2);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">WORD SPHERE
+        <input type="checkbox" name="all[]" id="wordsphere" value="wordsphere" onClick="uncheck(3);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">MECHONICA
+        <input type="checkbox" name="all[]" id="mechonica" value="mechonica" onClick="uncheck(4);">
+        <span class="checkmark"></span>
+      </label>
+      
+      
+      <div class="validate"></div>
+    </div>
+    <div class="col-lg-4 col-md-8 form-group mt-4">
+      <label class="container-check" >PRESENCIA
+        <input type="checkbox" name="all[]" id="presencia" value="presencia" onClick="uncheck(6);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">ELECTROLANCE
+        <input type="checkbox" name="all[]" id="electrovolt" value="electrovolt" onClick="uncheck(7);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">MYSTERY MANSION
+        <input type="checkbox" name="all[]" id="mysterymansion" value="mysterymansion" onClick="uncheck(8);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">MYSTICA
+        <input type="checkbox" name="all[]" id="mystica" value="mystica" onClick="uncheck(9);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">ART SPACE
+        <input type="checkbox" name="all[]" id="artspace" value="artspace" onClick="uncheck(16);">
+        <span class="checkmark"></span>
+      </label>
+      
+      
+      <div class="validate"></div>
+    </div>
+    <div class="col-lg-4 col-md-8 form-group mt-4">
+      <label class="container-check">XPORIUM
+        <input type="checkbox" name="all[]" id="xporium" value="xporium" onClick="uncheck(10);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">MIND QUEST
+        <input type="checkbox" name="all[]" id="mindquest" value="mindquest" onClick="uncheck(11);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">STRUQTA
+        <input type="checkbox" name="all[]" id="struqta" value="struqta" onClick="uncheck(12);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">CLICK O MANIA
+        <input type="checkbox" name="all[]" id="com" value="com" onClick="uncheck(13);">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container-check">IPL AUCTION
+        <input type="checkbox" name="all[]" id="iplauction" value="iplauction" onClick="uncheck(5);">
+        <span class="checkmark"></span>
+      </label>
+      
+      <div class="validate"></div>
+    </div>
+    
+  </div>
+
+      
+
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="text" class="form-control" name="referralname" id="referralname" placeholder="Referral Name" data-rule="minlen:1" data-msg="Please enter at least 1 chars" >
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="referralphone" id="referralphone" placeholder="Referral Phone Number" data-rule="minlen:1" data-msg="Please enter at least 1 chars" >
+            <div class="validate"></div>
+          </div>
+          <!-- <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="2" placeholder=" PLEASE PAY MONEY THROUGH PHONEPE,GOOGLEPAY TO 9959087767"></textarea>
+            <div class="validate"></div>
+          </div>
+          <br>
+          <div class="text-center"><button type="submit" onclick="final.php">proceed to pay</button></div> 
+          <div class="col-lg-4 col-md-6 form-group">
+             <h2>Upload Transaction image:</h2>
+            <p> -->
+
+            </p>
+            <p>
+
+            </p>
+           <!-- <input type="file" id="img" name="img" required>
+   -->
+          </div>
+         
+
+          <div class="text-center" onclick="submit();" ><button type="submit">Register</button></div>
+
+
+        </form>
+      
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What they're saying about us</p>
+        </div>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div> End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div> End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div> End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div> End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div> End testimonial item 
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <!-- <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some photos from Our Restaurant</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- ======= Chefs Section ======= -->
+    <!-- <section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Chefs</h2>
+          <p>Our Proffesional Chefs</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>End Chefs Section -->
+
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p style="font-family: 'Montserrat';">Contact Us</p>
+        </div>
+      </div>
+
+      <!-- <div data-aos="fade-up">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div> -->
+      
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Chinna Amiram, Bhimavaram</p>
+              </div>
+
+              
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>srkriste21@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>N.N. V GANESH : 8463914889</p>
+                <p>CH. AAKASH REDDY : 8978404135</p>
+                <p>P. ABHIRAM: 9959087767</p>
+                <p>J. SAMHITHA: 9398893798</p>
+              </div>
+
+            </div>
+            <div class="social-links mt-3">
+             
+              <a href="https://www.facebook.com/nipunasrkr/?ref=br_rs" class="facebook" style="font-size: 60px;"><i class="bx bxl-facebook" ></i></a>
+              <a href="https://www.instagram.com/srkriste/" class="instagram" style="font-size: 60px;"><i class="bx bxl-instagram"></i></a>
+              
+              <a href="https://www.youtube.com/channel/UC0xPbncT-KgZb2IiMZPYzDw" class="linkedin" style="font-size: 60px;"><i class="bx bxl-youtube"></i></a>
+            </div>
+          </div>
+      </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    var modal1 = document.getElementById("myModal1");
+    
+    // Get the button that opens the modal
+    var btn1 = document.getElementById("myBtn1");
+    
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close1")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn1.onclick = function() {
+      modal1.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function() {
+      modal1.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal1) {
+        modal1.style.display = "none";
+      }
+    }
+
+    var modal2 = document.getElementById("myModal2");
+    
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+    
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close2")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+      modal2.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+    }
+
+    var modal3 = document.getElementById("myModal3");
+    
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("myBtn3");
+    
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close3")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn3.onclick = function() {
+      modal3.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function() {
+      modal3.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal3) {
+        modal3.style.display = "none";
+      }
+    }
+
+    var modal4 = document.getElementById("myModal4");
+    
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("myBtn4");
+    
+    // Get the <span> element that closes the modal
+    var span4= document.getElementsByClassName("close4")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn4.onclick = function() {
+      modal4.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function() {
+      modal4.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal4) {
+        modal4.style.display = "none";
+      }
+    }
+
+    var modal5 = document.getElementById("myModal5");
+    
+    // Get the button that opens the modal
+    var btn5 = document.getElementById("myBtn5");
+    
+    // Get the <span> element that closes the modal
+    var span5 = document.getElementsByClassName("close5")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn5.onclick = function() {
+      modal5.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span5.onclick = function() {
+      modal5.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal5) {
+        modal5.style.display = "none";
+      }
+    }
+
+    var modal6 = document.getElementById("myModal6");
+    
+    // Get the button that opens the modal
+    var btn6 = document.getElementById("myBtn6");
+    
+    // Get the <span> element that closes the modal
+    var span6 = document.getElementsByClassName("close6")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn6.onclick = function() {
+      modal6.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span6.onclick = function() {
+      modal6.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal6) {
+        modal6.style.display = "none";
+      }
+    }
+
+    var modal7 = document.getElementById("myModal7");
+    
+    // Get the button that opens the modal
+    var btn7 = document.getElementById("myBtn7");
+    
+    // Get the <span> element that closes the modal
+    var span7 = document.getElementsByClassName("close7")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn7.onclick = function() {
+      modal7.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span7.onclick = function() {
+      modal7.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal7) {
+        modal7.style.display = "none";
+      }
+    }
+
+    var modal8 = document.getElementById("myModal8");
+    
+    // Get the button that opens the modal
+    var btn8 = document.getElementById("myBtn8");
+    
+    // Get the <span> element that closes the modal
+    var span8 = document.getElementsByClassName("close8")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn8.onclick = function() {
+      modal8.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span8.onclick = function() {
+      modal8.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal8) {
+        modal8.style.display = "none";
+      }
+    }
+
+
+    var modal9 = document.getElementById("myModal9");
+    
+    // Get the button that opens the modal
+    var btn9 = document.getElementById("myBtn9");
+    
+    // Get the <span> element that closes the modal
+    var span9 = document.getElementsByClassName("close9")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn9.onclick = function() {
+      modal9.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span9.onclick = function() {
+      modal9.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal9) {
+        modal9.style.display = "none";
+      }
+    }
+
+
+    var modal10 = document.getElementById("myModal10");
+    
+    // Get the button that opens the modal
+    var btn10 = document.getElementById("myBtn10");
+    
+    // Get the <span> element that closes the modal
+    var span10 = document.getElementsByClassName("close10")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn10.onclick = function() {
+      modal10.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span10.onclick = function() {
+      modal10.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal10) {
+        modal10.style.display = "none";
+      }
+    }
+
+   
+    
+    var modali = document.getElementById("myModali");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modali.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var spanimg = document.getElementsByClassName("closei")[0];
+
+// When the user clicks on <span> (x), close the modal
+spanimg.onclick = function() { 
+  modali.style.display = "none";
+}
+
+    var modal11 = document.getElementById("myModal11");
+    
+    // Get the button that opens the modal
+    var btn11 = document.getElementById("myBtn11");
+    
+    // Get the <span> element that closes the modal
+    var span11 = document.getElementsByClassName("close11")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn11.onclick = function() {
+      modal11.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span11.onclick = function() {
+      modal11.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal11) {
+        modal11.style.display = "none";
+      }
+    }
+
+
+    var modal20 = document.getElementById("myModal20");
+    
+    // Get the button that opens the modal
+    var btn20 = document.getElementById("myBtn20");
+    
+    // Get the <span> element that closes the modal
+    var span20= document.getElementsByClassName("close20")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn20.onclick = function() {
+      modal20.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span20.onclick = function() {
+      modal20.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal20) {
+        modal20.style.display = "none";
+      }
+    }
+
+    function submit()
+    {
+         var phone = document.getElementById("phone");
+         if (phone.length < 10)
+         {
+               alert(" PHONE NUMBER SHOULD BE 10 DIGITS ");
+         }
+    }
+
+    function checkRefresh(value)
+        {
+            document.form1.submit();
+        }   
+        
+        function uncheck(check)
+        {
+            var prim = document.getElementById("all");
+            var secn = document.getElementById("codecombat");
+            var thr = document.getElementById("wordsphere");
+            var four = document.getElementById("mechonica");
+            var five= document.getElementById("iplauction");
+            var six = document.getElementById("presencia");
+            var seven = document.getElementById("electrovolt");
+            var eight = document.getElementById("mysterymansion");
+            var nine = document.getElementById("mystica");
+            var ten = document.getElementById("xporium");
+            var eleven = document.getElementById("mindquest");
+            var twelve = document.getElementById("struqta");
+            var thriteen = document.getElementById("com");
+            var fourteeen = document.getElementById("combo1");
+            var fifteen = document.getElementById("combo2");
+            var sixteen =document.getElementById("artspace");
+            if (prim.checked == true &&  (secn.checked == true || secn.checked == true || thr.checked == true || four.checked == true || five.checked == true || six.checked == true || seven.checked == true || eight.checked == true || nine.checked == true || ten.checked == true || eleven.checked == true || twelve.checked == true
+             || thriteen.checked == true || fourteeen.checked == true || fifteen.checked == true ||  sixteen.checked == true  ))
+            {
+                if(check == 1)
+                {
+                    secn.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 2)
+                {
+                    secn.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 3)
+                {
+                    thr.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 4)
+                {
+                    four.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 5)
+                {
+                    five.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 6)
+                {
+                    six.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 7)
+                {
+                    seven.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 8)
+                {
+                    eight.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 9)
+                {
+                    nine.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 10)
+                {
+                    ten.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 11)
+                {
+                    eleven.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 12)
+                {
+                    twelve.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 13)
+                {
+                    thriteen.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 14)
+                {
+                    fourteeen.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 15)
+                {
+                    fifteen.checked = false;
+                    checkRefresh();
+                }
+                else if(check == 16)
+                {
+                    sixteen.checked = false;
+                    checkRefresh();
+                }
+                
+                
+            }
+            else if (fourteeen.checked == true  )
+            {
+                if(check == 14)
+                {
+                    eleven.checked = false;
+                    five.checked= false;
+                    sixteen.checked = false;
+                    
+                    checkRefresh();
+                }
+                else if(prim.checked == true || fifteen.checked ==true)
+                {
+                  if(check == 1)
+                {
+                  prim.checked == false ;
+                  
+                  alert('no');
+                  checkRefresh();
+                }
+                  
+                }
+                
+   
+            }
+        
+
+            else if (fifteen.checked == true )
+            {
+                if(check == 15)
+                {
+                    eight.checked = false;
+                    thr.checked= false;
+                    nine.checked= false;
+
+                    checkRefresh();
+                }
+                
+               
+               
+                
+            }
+        
+
+        }
+       
+    
+    </script>
+
+</body>
+
+</html>
